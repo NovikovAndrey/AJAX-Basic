@@ -14,14 +14,14 @@ namespace AJAX_Basic
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            context.Response.Write(DateTime.Now.ToLongTimeString());
         }
 
         public bool IsReusable
         {
             get
             {
-                return false;
+                return true;
             }
         }
     }
